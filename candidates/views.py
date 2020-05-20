@@ -15,7 +15,6 @@ logger = logging.getLogger(__name__)
 def register(request):
     try:
         if request.method == 'POST':
-            return Response({'message': "Congrats! You're registered!"}, status=status.HTTP_200_OK)
             first_name = request.data.get('first_name')
             last_name = request.data.get('last_name')
             email = request.data.get('email')
